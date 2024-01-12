@@ -1,0 +1,14 @@
+static int getMoneySpent(int[] keyboards, int[] drives, int b) {
+        
+        int buget=0;
+        for (int i=0;i<keyboards.length;i++){
+            for(int j=0;j<drives.length;j++){
+                int newb=keyboards[i]+drives[j];
+                if(newb<=b && newb>buget){
+                    buget=newb;
+                }
+            }       
+        }
+        return buget==0?-1:buget;
+
+    }
